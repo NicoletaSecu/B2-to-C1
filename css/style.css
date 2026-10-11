@@ -19,7 +19,7 @@ h3{font-size:1.05rem;margin:1.2em 0 .4em}
 h4{margin:.2em 0;font-size:.95rem}
 .layout{display:flex;min-height:100vh}
 nav{width:240px;flex:none;background:var(--navy);border-right:4px solid var(--red);padding:18px 12px;position:sticky;top:0;height:100vh;overflow:auto}
-.brand{font-weight:800;font-size:1.3rem;padding:0 10px 14px;letter-spacing:-.02em;color:#fff}
+.brand{display:block;text-decoration:none;cursor:pointer;font-weight:800;font-size:1.3rem;padding:0 10px 14px;letter-spacing:-.02em;color:#fff}
 .brand span{color:#ff5a66}
 #navlinks a{display:block;padding:7px 10px;border-radius:8px;color:#dbe6fa;text-decoration:none;font-size:.95rem}
 #navlinks a:hover{background:rgba(255,255,255,.12)}

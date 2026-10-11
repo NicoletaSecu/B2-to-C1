@@ -133,6 +133,7 @@ function renderTask(task, host) {
         }
         if (!task.noErr) {
           const key = task.map ? task.map[i] : task.id + ':' + i;
+          if (!key) return;
           if (ok) delete S.errors[key]; else S.errors[key] = today();
         }
       });
@@ -213,6 +214,7 @@ V.home = function () {
     <a class="card" href="#teoria"><h3>1. Studia la teoria</h3><p>${GROUPS.th.length + GROUPS.g.length} capitoli: frase, verbi, articoli, aggettivi, avverbi, preposizioni, word formation e strutture da C1. Ognuno con esercizi.</p></a>
     <a class="card" href="#lessico"><h3>2. Parole C1 e modi di dire</h3><p>${cardsTot} schede: da B2 a C1, lista Oxford 5000, idioms spiegati, phrasal verbs, collocazioni.</p></a>
     <a class="card" href="#uoe"><h3>3. Esercizi in formato esame</h3><p>Use of English, Reading, Listening, Writing e Speaking, parte per parte, con link ai siti di pratica.</p></a>
+    <a class="card" href="#quiz"><h3>Quiz veloci</h3><p>Quiz sempre diversi, generati da tutti gli esercizi e dalle schede: misti o per argomento.</p></a>
     <a class="card" href="#sim"><h3>4. Prove complete</h3><p>Simulazioni a tempo con punteggio, più 20 test di Reading e 30 di Listening sui siti dedicati.</p></a>
   </div>
   <h2>A che punto sei</h2>
@@ -384,6 +386,70 @@ V.speaking = function () {
   });
 };
 
+
+// ---------- quiz generati da tutti gli esercizi ----------
+// Frase che contiene lo spazio i di un cloze, con gli altri spazi già riempiti.
+function clozeSentence(task, i) {
+  const flat = task.text.replace(/\s+/g, ' ');
+  const sen = (flat.match(/[^.!?]+[.!?]+/g) || [flat]).find(x => x.includes('{' + (i + 1) + '}')) || '';
+  return sen.trim().replace('{' + (i + 1) + '}', '___').replace(/\{(\d+)\}/g, (m, n) => { const o = task.items[n - 1]; return o.t === 'mc' ? o.o[o.a] : o.a[0]; });
+}
+// Tutte le domande "autonome": teoria, grammatica, Part 4, più le frasi dei cloze di Part 1-3.
+function poolTasks(filter) {
+  const out = [];
+  Object.values(REG).forEach(t => {
+    if (!filter(t)) return;
+    t.items.forEach((it, i) => {
+      const key = t.id + ':' + i;
+      if (t.alone) out.push({ it, key });
+      else if (t.text && /^p[123]$/.test(t.kind)) { const q = clozeSentence(t, i); if (q) out.push({ it: Object.assign({}, it, { q }), key }); }
+    });
+  });
+  return out;
+}
+// Domande a scelta multipla generate dalle schede di lessico.
+function poolDecks(ids) {
+  const out = [];
+  C.vocab.filter(d => !ids || ids.includes(d.id)).forEach(d => {
+    const meanings = [...new Set(d.cards.map(c => c[1]))];
+    d.cards.forEach(c => out.push({ it: mc(c[0], [c[1]].concat(shuffle(meanings.filter(m => m !== c[1])).slice(0, 3))), key: null }));
+  });
+  return out;
+}
+const QUIZ = [
+  ['misto', 'Quiz misto', 'Un po\' di tutto: grammatica, key word transformations, cloze e lessico.', n => shuffle(poolTasks(() => true)).slice(0, Math.ceil(n * 0.7)).concat(shuffle(poolDecks()).slice(0, Math.floor(n * 0.3)))],
+  ['grammatica', 'Teoria e grammatica', 'Tutte le domande dei capitoli di teoria e delle strutture da C1.', () => poolTasks(t => /^(th|g)-/.test(t.id))],
+  ['kwt', 'Key word transformations', 'Solo trasformazioni in stile Part 4, da tutto il sito.', () => poolTasks(() => true).filter(x => x.it.t === 'kwt')],
+  ['wf', 'Word formation', 'Parole da trasformare, in stile Part 3.', () => poolTasks(t => t.kind === 'p3' || t.id === 'th-word-formation')],
+  ['colloc', 'Collocazioni e scelta multipla', 'Frasi in stile Part 1 e collocazioni.', () => poolTasks(t => t.kind === 'p1' || t.id === 'th-collocations').concat(poolDecks(['colloc']))],
+  ['prep', 'Preposizioni e open cloze', 'Frasi in stile Part 2 e preposizioni dipendenti.', () => poolTasks(t => t.kind === 'p2' || t.id === 'th-prepositions').concat(poolDecks(['preps']))],
+  ['b2c1', 'Da B2 a C1', 'Trova l\'alternativa da C1 alle parole troppo semplici.', () => poolDecks(['up-adj', 'up-verb', 'up-other'])],
+  ['oxford', 'Parole Oxford C1', 'Aggettivi, verbi, avverbi e nomi di livello C1.', () => poolDecks(['ox-adj', 'ox-verb', 'ox-adv', 'ox-noun'])],
+  ['idioms', 'Idioms e phrasal verbs', 'Modi di dire, phrasal verbs ed espressioni.', () => poolDecks(['idioms', 'phrasal', 'take', 'come'])],
+  ['errori', 'Solo i miei errori', 'Le domande che hai sbagliato finora.', () => poolTasks(() => true).filter(x => S.errors[x.key])],
+];
+V.quiz = function (mode) {
+  const n = S.qn || 10;
+  const q = QUIZ.find(x => x[0] === mode);
+  if (!q) {
+    main.innerHTML = `<h1>Quiz</h1>
+    <p>Quiz sempre diversi, creati pescando a caso da tutti gli esercizi e da tutte le schede del sito. Ogni errore finisce nel <a href="#errori">quaderno degli errori</a>.</p>
+    <p>Domande per quiz: <select id="qn" class="in">${[10, 20, 30].map(k => `<option${k === n ? ' selected' : ''}>${k}</option>`).join('')}</select></p>
+    <div class="grid">${QUIZ.map(x => { const tot = x[0] === 'misto' ? poolTasks(() => true).length + poolDecks().length : x[3](n).length; return `<a class="card" href="#quiz/${x[0]}"><h3>${esc(x[1])} ${S.scores['qz-' + x[0]] ? badge('qz-' + x[0]) : ''}</h3><p>${esc(x[2])}</p><p>${tot} domande disponibili</p></a>`; }).join('')}</div>`;
+    $('#qn').onchange = e => { S.qn = +e.target.value; save(); };
+    return;
+  }
+  const picked = (mode === 'misto' ? shuffle(q[3](n)) : shuffle(q[3](n)).slice(0, n));
+  main.innerHTML = `<a class="back" href="#quiz">← Quiz</a><h1>${esc(q[1])}</h1>` + (picked.length
+    ? `<p class="muted">${picked.length} domande.</p><div id="task"></div><div class="bar"><button id="chk" class="btn primary">Controlla</button><button id="again" class="btn">Altre domande</button><span id="res"></span></div>`
+    : '<div class="panel"><p>Nessuna domanda disponibile per questo quiz.</p></div>');
+  if (!picked.length) return;
+  const task = { id: 'qz-' + mode, noSave: true, map: picked.map(x => x.key), items: picked.map(x => x.it) };
+  const api = renderTask(task, $('#task'));
+  $('#chk').onclick = () => { const r = api.check(); S.scores[task.id] = { s: r.s, m: r.m, d: today() }; save(); $('#res').textContent = `Punteggio: ${r.s}/${r.m} (${Math.round(100 * r.s / r.m)}%)`; };
+  $('#again').onclick = () => V.quiz(mode);
+};
+
 function band(p) { return p >= 88 ? 'Grade A (livello C2)' : p >= 75 ? 'Grade B — C1 superato bene' : p >= 60 ? 'Grade C — C1 superato' : p >= 45 ? 'Livello B2: non basta ancora per il C1' : 'Sotto il livello B2'; }
 V.sim = function (n) {
   const sim = C.sims[n - 1];
@@ -458,7 +524,7 @@ V.risorse = function () {
 };
 
 //  navigazione 
-const NAV = [['home', 'Home'], ['esame', 'L\'esame'], null, ['teoria', 'Teoria e grammatica'], ['lessico', 'Parole C1 e idioms'], null, ['uoe', 'Use of English'], ['reading', 'Reading'], ['listening', 'Listening'], ['writing', 'Writing'], ['speaking', 'Speaking'], null, ['sim', 'Simulazioni'], ['errori', 'Quaderno errori'], ['piano', 'Piano di studio'], ['risorse', 'Risorse']];
+const NAV = [['home', 'Home'], ['esame', 'L\'esame'], null, ['teoria', 'Teoria e grammatica'], ['lessico', 'Parole C1 e idioms'], null, ['uoe', 'Use of English'], ['reading', 'Reading'], ['listening', 'Listening'], ['writing', 'Writing'], ['speaking', 'Speaking'], null, ['quiz', 'Quiz'], ['sim', 'Simulazioni'], ['errori', 'Quaderno errori'], ['piano', 'Piano di studio'], ['risorse', 'Risorse']];
 $('#navlinks').innerHTML = NAV.map(n => n ? `<a href="#${n[0]}" data-r="${n[0]}">${n[1]}</a>` : '<div class="sep"></div>').join('');
 function route() {
   live.forEach(t => t.stop()); live = []; TTS.stop();
