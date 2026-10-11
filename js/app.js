@@ -56,7 +56,7 @@ function badge(id) {
   const p = s.m ? s.s / s.m : 0;
   return `<span class="badge ${p >= .75 ? 'ok' : p >= .5 ? 'mid' : 'low'}">${s.s}/${s.m}</span>`;
 }
-const tagBadge = t => t === 'corso' ? ' <span class="badge tag">dal corso</span>' : t === 'top' ? ' <span class="badge tag">chiave per l\'esame</span>' : '';
+const tagBadge = t => t === 'top' ? ' <span class="badge tag">chiave per l\'esame</span>' : '';
 const fmtTime = s => String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
 let live = [];
 function timer(el, secs, onEnd) {
@@ -257,7 +257,7 @@ V.uoe = () => partList('Use of English', 'Le prime quattro parti della prova di 
 V.reading = () => partList('Reading', 'Parts 5–8. Le parti 5, 6 e 7 valgono 2 punti a domanda. I testi di questo sito sono un po\' più brevi di quelli reali: per allenare la resistenza usa anche i test completi in <a href="#risorse">Risorse</a>.', ['p5', 'p6', 'p7', 'p8'], C.reading, practiceLinks('Altri esercizi sui siti dedicati', C.practice.reading) + practiceLinks('Test completi di Reading & Use of English (EngExam)', C.practice.ruoeTests));
 V.listening = function () {
   main.innerHTML = `<h1>Listening</h1>
-  <p>Quattro esercizi, uno per ogni parte dell'esame. L'audio è letto dalla <b>voce sintetica del tuo browser</b>: va bene per allenare il metodo, ma per abituarti a voci e accenti veri fai anche i listening di EngExam indicati dalla docente (in <a href="#risorse">Risorse</a>).</p>
+  <p>Quattro esercizi, uno per ogni parte dell'esame. L'audio è letto dalla <b>voce sintetica del tuo browser</b>: va bene per allenare il metodo, ma per abituarti a voci e accenti veri fai anche i listening di EngExam (in <a href="#risorse">Risorse</a>).</p>
   <details class="tip"><summary>Strategia</summary><p>${LTIPS}</p></details>${taskCards(GROUPS.listen)}
   ${practiceLinks('Listening completi con audio reale (EngExam)', C.practice.listeningTests)}${practiceLinks('Altri siti per l\'ascolto', C.practice.listening)}`;
 };
@@ -287,7 +287,7 @@ V.t = function (id) {
 
 V.lessico = function (id, mode) {
   if (!id) {
-    main.innerHTML = `<h1>Parole C1 e modi di dire</h1><p>Le parole per passare da B2 a C1, la lista Oxford 5000 di livello C1, i modi di dire spiegati e il lessico del corso. Ogni mazzo ha tre modalità: <b>lista</b> da studiare, <b>schede</b> (giri la carta e dici se la sai) e <b>quiz</b> a scelta multipla. Per usarle davvero: scrivi una frase tua con ogni espressione nuova.</p>
+    main.innerHTML = `<h1>Parole C1 e modi di dire</h1><p>Le parole per passare da B2 a C1, la lista Oxford 5000 di livello C1, i modi di dire spiegati e altro lessico utile. Ogni mazzo ha tre modalità: <b>lista</b> da studiare, <b>schede</b> (giri la carta e dici se la sai) e <b>quiz</b> a scelta multipla. Per usarle davvero: scrivi una frase tua con ogni espressione nuova.</p>
     ${[...new Set(C.vocab.map(d => d.group))].map(g => `<h2>${esc(g)}</h2><div class="grid">${C.vocab.filter(d => d.group === g).map(d => { const k = d.cards.filter((_, i) => S.cards[d.id + ':' + i]).length; return `<a class="card" href="#lessico/${d.id}"><h3>${esc(d.title)}</h3><p>${esc(d.sum)}</p><div class="meter"><i style="width:${100 * k / d.cards.length}%"></i></div><p>${k}/${d.cards.length} ${tagBadge(d.tag)}</p></a>`; }).join('')}</div>`).join('')}`;
     return;
   }
@@ -334,14 +334,9 @@ V.writing = function (id) {
   const Wd = C.writing;
   if (!id) {
     main.innerHTML = `<h1>Writing</h1>${Wd.criteria}
-    <h2>I tuoi testi, corretti</h2><div class="grid"><a class="card" href="#writing/miei"><h3>Essay sul turismo e proposal sul town</h3><p>Ho corretto i due testi che erano nella cartella "materiale": errori, cosa manca per il C1 e versione migliorata.</p></a></div>
     <h2>Tipi di testo</h2><div class="grid">${Wd.types.map(t => `<a class="card" href="#writing/${t.id}"><h3>${esc(t.title)}</h3><p>${esc(t.sum)}</p></a>`).join('')}</div>
     ${practiceLinks('Guide ed esempi sui siti dedicati', C.practice.writing)}
-    <div class="note">Il sito non può dare un voto ai tuoi testi. Nell'editor trovi il pulsante <b>"Copia per la correzione"</b>: incolla il testo in una chat con Claude (o mandalo alla docente) per avere una valutazione sui quattro criteri Cambridge.</div>`;
-    return;
-  }
-  if (id === 'miei') {
-    main.innerHTML = `<a class="back" href="#writing">← Writing</a><h1>I tuoi testi, corretti</h1>` + Wd.mine.map(m => `<h2>${esc(m.title)}</h2><div class="panel">${m.verdict}</div><table class="tbl"><tr><th>Hai scritto</th><th>Meglio</th><th>Perché</th></tr>${m.fixes.map(f => `<tr><td class="x">${esc(f[0])}</td><td class="v">${esc(f[1])}</td><td>${esc(f[2])}</td></tr>`).join('')}</table>`).join('');
+    <div class="note">Il sito non può dare un voto ai tuoi testi. Nell'editor trovi il pulsante <b>"Copia per la correzione"</b>: incolla il testo in una chat con Claude (o mandalo a un insegnante) per avere una valutazione sui quattro criteri Cambridge.</div>`;
     return;
   }
   const t = Wd.types.find(x => x.id === id); if (!t) return V.writing();
@@ -370,7 +365,7 @@ V.scrivi = function (type, n) {
   txt.oninput = count; count();
   $('#copy').onclick = () => {
     const out = `Please assess this Cambridge C1 Advanced ${t.title} using the four official criteria (Content, Communicative Achievement, Organisation, Language), give a mark out of 5 for each, list my mistakes with corrections, and show me how to upgrade B2 phrases to C1. Rispondi in italiano.\n\nTASK: ${p.replace(/<[^>]+>/g, '')}\n\nMY ANSWER:\n${txt.value}`;
-    const done = () => { $('#msg').textContent = 'Copiato: incollalo in una chat con Claude o mandalo alla docente.'; };
+    const done = () => { $('#msg').textContent = 'Copiato: incollalo in una chat con Claude o mandalo a un insegnante.'; };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(out).then(done, () => { txt.select(); document.execCommand('copy'); done(); });
     else { txt.select(); document.execCommand('copy'); done(); }
   };
@@ -397,7 +392,7 @@ V.sim = function (n) {
     <p>Prova completa di <b>Reading & Use of English</b>: 8 parti, 56 domande, <b>90 minuti</b>, punteggio calcolato come all'esame (78 punti). Falla in un'unica seduta, senza dizionario e senza pause.</p>
     <div class="grid">${C.sims.map((s, i) => `<a class="card" href="#sim/${i + 1}"><h3>${esc(s.title)} ${badge('sim-' + (i + 1))}</h3><p>${S.scores['sim-' + (i + 1)] ? band(100 * S.scores['sim-' + (i + 1)].s / S.scores['sim-' + (i + 1)].m) : '90 minuti · 8 parti'}</p></a>`).join('')}</div>
     <h2>Altre prove complete sui siti dedicati</h2>
-    <p>Quando hai finito queste due, continua con i test completi di EngExam, il sito indicato dalla docente: si fanno online, con soluzioni e spiegazioni. Falli sempre cronometrati (90 minuti il Reading & UoE, 40 il Listening).</p>
+    <p>Quando hai finito queste due, continua con i test completi di EngExam: si fanno online, con soluzioni e spiegazioni. Falli sempre cronometrati (90 minuti il Reading & UoE, 40 il Listening).</p>
     ${practiceLinks('Reading & Use of English – test completi', C.practice.ruoeTests)}${practiceLinks('Listening – test completi con audio', C.practice.listeningTests)}${practiceLinks('Altri siti', C.practice.reading)}
     <table class="tbl"><tr><th>Simulazione completa di una giornata d'esame</th><th>Tempo</th></tr>
     <tr><td><a href="#sim/1">Reading & Use of English</a></td><td>90 min</td></tr>
@@ -458,7 +453,7 @@ V.errori = function () {
 };
 
 V.risorse = function () {
-  main.innerHTML = `<h1>Risorse della docente</h1><p>Tutti i link condivisi durante il corso, ordinati per uso. Quelli in cima sono le prove d'esame complete: sono il complemento naturale di questo sito.</p>` +
+  main.innerHTML = `<h1>Risorse utili</h1><p>Link utili per prepararsi, ordinati per uso. Quelli in cima sono le prove d'esame complete: sono il complemento naturale di questo sito.</p>` +
     C.resources.map(g => `<h2>${esc(g[0])}</h2><div class="grid">${g[1].map(r => `<a class="card" href="${r[1]}" target="_blank" rel="noopener"><h3>${esc(r[0])} ↗</h3>${r[2] ? `<p>${esc(r[2])}</p>` : ''}</a>`).join('')}</div>`).join('');
 };
 

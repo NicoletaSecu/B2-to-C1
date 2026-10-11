@@ -1,6 +1,6 @@
 // LESSICO: mazzi di flashcard. Ogni carta = [termine, significato, esempio]
 C1.vocab = [
-{ id: 'take', title: 'Espressioni con TAKE', tag: 'corso', sum: 'Dal foglio "take risks": phrasal verbs ed espressioni idiomatiche.', cards: [
+{ id: 'take', title: 'Espressioni con TAKE', tag: 'corso', sum: 'Phrasal verbs ed espressioni idiomatiche.', cards: [
 ['take advantage of sth/sb', 'approfittare di', 'We took advantage of the good weather to go hiking.'],
 ['take sth for granted', 'dare per scontato', 'We take health, water and peace for granted.'],
 ['take a toll on', 'avere effetti pesanti su, logorare', 'Stress and lack of sleep take a toll on your health.'],
@@ -35,7 +35,7 @@ C1.vocab = [
 ['take charge of', 'prendere in mano, assumere il comando di', 'In a team, are you the one who takes charge?'],
 ['take sb by surprise', 'cogliere di sorpresa', 'The news took everyone by surprise.'],
 ]},
-{ id: 'come', title: 'Phrasal verbs con COME', tag: 'corso', sum: 'Dal link ESL Inventory condiviso dalla docente.', cards: [
+{ id: 'come', title: 'Phrasal verbs con COME', tag: 'corso', sum: 'I phrasal verbs più utili con COME.', cards: [
 ['come across', 'trovare / incontrare per caso; dare l\'impressione di', 'I came across an old photo. · She comes across as confident.'],
 ['come up with', 'escogitare, farsi venire in mente', 'Residents came up with a simple idea.'],
 ['come down with', 'ammalarsi di', 'I think I\'m coming down with flu.'],
@@ -97,15 +97,15 @@ C1.vocab = [
 ['put aside / set aside', 'mettere da parte', 'Set aside an hour a day for reading.'],
 ['pick on', 'prendere di mira', 'The comedian picked on people in the front row.'],
 ]},
-{ id: 'idioms', title: 'Idioms e modi di dire', tag: 'top', sum: 'Per speaking e lettere informali. Quelli segnati dal corso sono dei fogli della docente.', cards: [
-['under the weather', 'non in forma, un po\' malato (corso)', 'She went to the party even though she felt under the weather.'],
-['be fraught with (problems / danger)', 'essere pieno di (corso)', 'This plan is fraught with problems.'],
-['have something going for you', 'avere un punto a proprio favore (corso)', 'He\'s good-looking — he certainly has that going for him.'],
-['be of half a mind to / be in two minds about', 'essere quasi tentato di / essere indeciso (corso)', 'I\'m in two minds about quitting my job.'],
-['fall at someone\'s feet', 'cadere ai piedi di qualcuno (corso)', 'Guys fall at her feet.'],
-['poke fun at', 'prendere in giro (corso)', 'It\'s healthy to poke fun at yourself.'],
-['put your feet up', 'rilassarsi, riposarsi (corso)', 'I wish I could put my feet up this weekend.'],
-['over the moon', 'al settimo cielo (corso)', 'I was over the moon when I passed.'],
+{ id: 'idioms', title: 'Idioms e modi di dire', tag: 'top', sum: 'Per speaking e lettere informali.', cards: [
+['under the weather', 'non in forma, un po\' malato', 'She went to the party even though she felt under the weather.'],
+['be fraught with (problems / danger)', 'essere pieno di', 'This plan is fraught with problems.'],
+['have something going for you', 'avere un punto a proprio favore', 'He\'s good-looking — he certainly has that going for him.'],
+['be of half a mind to / be in two minds about', 'essere quasi tentato di / essere indeciso', 'I\'m in two minds about quitting my job.'],
+['fall at someone\'s feet', 'cadere ai piedi di qualcuno', 'Guys fall at her feet.'],
+['poke fun at', 'prendere in giro', 'It\'s healthy to poke fun at yourself.'],
+['put your feet up', 'rilassarsi, riposarsi', 'I wish I could put my feet up this weekend.'],
+['over the moon', 'al settimo cielo', 'I was over the moon when I passed.'],
 ['a blessing in disguise', 'una fortuna nascosta, non tutto il male vien per nuocere', 'Losing that job was a blessing in disguise.'],
 ['once in a blue moon', 'una volta ogni morte di papa', 'We eat out once in a blue moon.'],
 ['the tip of the iceberg', 'la punta dell\'iceberg', 'These complaints are just the tip of the iceberg.'],
@@ -151,7 +151,7 @@ C1.vocab = [
 ['strongly recommend', 'raccomandare vivamente', 'I would strongly recommend accepting the offer.'],
 ['widely believed / accepted', 'opinione diffusa', 'It is widely accepted that…'],
 ['utterly ridiculous', 'assolutamente ridicolo', 'The idea is utterly ridiculous.'],
-['a tight labour market', 'mercato del lavoro con poca offerta (corso)', 'The labour market is really tight now.'],
+['a tight labour market', 'mercato del lavoro con poca offerta', 'The labour market is really tight now.'],
 ['a sharp / steep rise in', 'un forte aumento di', 'There has been a sharp rise in rents.'],
 ['a narrow escape', 'scamparla per un pelo', 'We had a narrow escape.'],
 ['have an impact on', 'avere un impatto su', 'Tourism has a huge impact on the environment.'],
@@ -171,11 +171,11 @@ C1.vocab = [
 ['room for improvement', 'margine di miglioramento', 'There is still room for improvement.'],
 ['at the expense of', 'a scapito di', 'Jokes at the expense of others.'],
 ['a source of frustration', 'fonte di frustrazione', 'Voice recognition is a source of frustration.'],
-['conspiracy theory', 'teoria del complotto (corso)', 'People believe conspiracy theories no matter what.'],
+['conspiracy theory', 'teoria del complotto', 'People believe conspiracy theories no matter what.'],
 ['severe environmental degradation', 'grave degrado ambientale', 'Mass tourism causes severe environmental degradation.'],
 ['an influx of visitors', 'un afflusso di visitatori', 'The unregulated influx of visitors.'],
 ]},
-{ id: 'feelings', title: 'Emozioni forti e "a sense of…"', tag: 'corso', sum: 'Dal foglio "take risks": aggettivi e collocazioni con SENSE OF.', cards: [
+{ id: 'feelings', title: 'Emozioni forti e "a sense of…"', tag: 'corso', sum: 'Aggettivi e collocazioni con SENSE OF.', cards: [
 ['exhilarated', 'euforico, elettrizzato (positivo)', 'I felt exhilarated at the top.'],
 ['thrilled', 'entusiasta, emozionatissimo', 'I was thrilled to get the job.'],
 ['terrified / petrified', 'terrorizzato / paralizzato dalla paura', 'I was petrified of falling.'],
@@ -197,7 +197,7 @@ C1.vocab = [
 ['a sense of security / fairness', 'senso di sicurezza / giustizia', 'Routine gives us a sense of security.'],
 ['NON si dice: a sense of down / a sense of crazy', '"sense of" vuole un NOME (non aggettivi)', 'a sense of peace ✓ · a sense of crazy ✗'],
 ]},
-{ id: 'lessons', title: 'Parole dai testi delle lezioni', tag: 'corso', sum: 'Humour, multitasking, turismo: il lessico dei materiali visti in classe.', cards: [
+{ id: 'lessons', title: 'Parole da articoli e video', tag: 'corso', sum: 'Humour, multitasking, turismo: lessico utile da testi di attualità.', cards: [
 ['light-hearted', 'spensierato, leggero', 'A more light-hearted outlook on life.'],
 ['outlook on life', 'modo di vedere la vita', 'A humorous outlook is good for your health.'],
 ['self-deprecating', 'autoironico', 'Self-deprecating humour.'],
@@ -210,7 +210,7 @@ C1.vocab = [
 ['reframe', 'vedere sotto un\'altra luce', 'Playful people reframe boring situations.'],
 ['self-esteem', 'autostima', 'A predictor of higher self-esteem.'],
 ['on the whole', 'nel complesso', 'On the whole, the results were positive.'],
-['quaint', 'pittoresco, d\'altri tempi', 'Trento is a small and quaint city.'],
+['quaint', 'pittoresco, d\'altri tempi', 'Bath is a small and quaint city.'],
 ['brusque', 'brusco', 'She spoke to me in a brusque way.'],
 ['juggle (tasks)', 'destreggiarsi tra', 'People who constantly juggle tasks make more mistakes.'],
 ['undamaged / unscathed', 'intatto / illeso', 'Few ecosystems remain undamaged.'],
@@ -220,8 +220,8 @@ C1.vocab = [
 ['derelict / neglected', 'abbandonato / trascurato', 'The riverside area is neglected.'],
 ]},
 { id: 'linkers', title: 'Linkers e frasi da essay', tag: 'top', sum: 'Per organizzare essay, report e proposal. Include pros / cons e sinonimi.', cards: [
-['pros / positives / upsides / benefits / merits', 'vantaggi (dal tuo appunto)', 'The merits of the scheme are obvious.'],
-['cons / downsides / drawbacks / disadvantages / shortcomings', 'svantaggi (dal tuo appunto)', 'The main drawback is the cost.'],
+['pros / positives / upsides / benefits / merits', 'vantaggi', 'The merits of the scheme are obvious.'],
+['cons / downsides / drawbacks / disadvantages / shortcomings', 'svantaggi', 'The main drawback is the cost.'],
 ['It is generally accepted that…', 'è opinione comune che', 'It is generally accepted that tourism plays a pivotal role.'],
 ['There is no denying that…', 'è innegabile che', 'There is no denying that tourism brings benefits.'],
 ['The first thing to remember is…', 'la prima cosa da ricordare è', 'The first thing to remember is the economic impact.'],
@@ -246,7 +246,7 @@ C1.vocab = [
 ['The aim / purpose of this proposal is to…', 'lo scopo di questa proposta è', 'The purpose of this proposal is to put forward…'],
 ['I would strongly recommend + -ing / that…', 'raccomando vivamente di', 'I would strongly recommend that the council approve the plan.'],
 ]},
-{ id: 'adverbs', title: 'Comment adverbs', tag: 'corso', sum: 'Dal Wordwall "Comment adverbs – advanced".', cards: [
+{ id: 'adverbs', title: 'Comment adverbs', tag: 'corso', sum: 'Avverbi che mostrano l\'atteggiamento di chi parla.', cards: [
 ['Admittedly', 'bisogna ammettere che', 'Admittedly, the plan is expensive.'],
 ['Arguably', 'si può sostenere che', 'Arguably, this is the best solution.'],
 ['Apparently', 'a quanto pare (per sentito dire)', 'Apparently, he has resigned.'],
@@ -264,7 +264,7 @@ C1.vocab = [
 ['Interestingly', 'cosa interessante', 'Interestingly, nobody complained.'],
 ['Surprisingly', 'sorprendentemente', 'Surprisingly, the nurse training proved useful.'],
 ]},
-{ id: 'prefixes', title: 'Prefissi negativi: un-, in-, im-, il-, ir-, dis-, mis-', tag: 'corso', sum: 'Dal quiz "UN vs IN" e dal video sui prefissi. Fondamentali per la Part 3.', cards: [
+{ id: 'prefixes', title: 'Prefissi negativi: un-, in-, im-, il-, ir-, dis-, mis-', tag: 'corso', sum: 'Fondamentali per la Part 3.', cards: [
 ['damaged → ?', 'undamaged', 'Few ecosystems remain undamaged.'],
 ['aware → ?', 'unaware', 'He was unaware of the danger.'],
 ['predictable → ?', 'unpredictable', 'An unpredictable industry.'],
@@ -366,7 +366,7 @@ C1.vocab = [
 ['___ account of the weather', 'on', 'a causa di'],
 ['___ the verge of giving up', 'on', 'sul punto di'],
 ]},
-{ id: 'register', title: 'Formale vs informale (lettere ed email)', tag: 'corso', sum: 'Dal Wordwall "C1 informal letter language": saper cambiare registro.', cards: [
+{ id: 'register', title: 'Formale vs informale (lettere ed email)', tag: 'corso', sum: 'Saper cambiare registro tra formale e informale.', cards: [
 ['ask for (informale) → ?', 'request', 'I am writing to request further information.'],
 ['get → ?', 'obtain / receive', 'I have not yet received a reply.'],
 ['need → ?', 'require', 'Should you require any assistance…'],

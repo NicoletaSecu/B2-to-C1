@@ -1,5 +1,5 @@
 // GRAMMATICA: spiegazione breve (in italiano) + esercizi in stile esame.
-// tag 'corso' = argomento visto a lezione / nei link della docente.
+// tag 'corso' = argomento di base del programma (non mostrato a schermo).
 C1.grammar = [
 {
 id: 'inversion', title: 'Inversion (inversione dopo avverbi negativi)', tag: 'top',
@@ -17,7 +17,7 @@ html: `
 <tr><td>So + agg. / Such + be</td><td><em>So boring was the film</em> that we left.</td></tr>
 </table>
 <p>Se non c'è un ausiliare, si usa <em>do / does / did</em>: <em>Rarely does he</em> complain.</p>
-<div class="note">Nel tuo essay sul turismo hai già usato bene <b>Not only does international tourism generate…</b> e <b>Rare are the occasions when…</b>. Continua: una (massimo due) inversioni per testo bastano.</div>`,
+<div class="note">Esempi da essay: <b>Not only does international tourism generate…</b> e <b>Rare are the occasions when…</b>. Una (massimo due) inversioni per testo bastano.</div>`,
 items: [
 kwt('I had never seen such a beautiful sunset before.', 'NEVER', '___ such a beautiful sunset.', ['never before had I seen', 'never had I seen']),
 kwt('As soon as we left the house, it started to rain.', 'SOONER', 'No ___ the house than it started to rain.', ['sooner had we left']),
@@ -41,7 +41,7 @@ html: `
 <tr><th>Struttura</th><th>Esempio</th></tr>
 <tr><td>What + frase + be + …</td><td><em>What I really admire is</em> her determination.</td></tr>
 <tr><td>What happened was (that) …</td><td><em>What happened was that</em> the train broke down.</td></tr>
-<tr><td>It + be + elemento + that / who …</td><td><em>It was Tom who</em> broke the window. · <em>It was in Trento that</em> I met her.</td></tr>
+<tr><td>It + be + elemento + that / who …</td><td><em>It was Tom who</em> broke the window. · <em>It was in Bath that</em> I met her.</td></tr>
 <tr><td>It wasn't until … that …</td><td><em>It wasn't until I got home that</em> I realised.</td></tr>
 <tr><td>All (that) + frase + be + …</td><td><em>All I want is</em> a quiet weekend. (= l'unica cosa)</td></tr>
 <tr><td>The thing / person / place / reason + that/who/where/why … be …</td><td><em>The reason why he resigned was that</em> he felt undervalued.</td></tr>
@@ -56,7 +56,7 @@ kwt('The noise annoys me most.', 'THING', 'The ___ most is the noise.', ['thing 
 kwt('He resigned because he felt undervalued.', 'REASON', 'The ___ that he felt undervalued.', ['reason why he resigned was', 'reason he resigned was', 'reason that he resigned was']),
 kwt('We need more time, nothing else.', 'ONLY', 'The ___ is more time.', ['only thing we need', 'only thing that we need']),
 mc('___ happened was that the train broke down.', ['What', 'That', 'It', 'Which']),
-mc('It was in Trento ___ I first met her.', ['that', 'what', 'which', 'when']),
+mc('It was in Bath ___ I first met her.', ['that', 'what', 'which', 'when']),
 gap('What we need ___ a completely new approach.', 'is'),
 gap('It\'s the humidity, not the heat, ___ makes summer unbearable.', ['that', 'which']),
 ]},
@@ -83,7 +83,7 @@ html: `
 <li><em>but for</em> + nome = se non fosse stato per: <em>But for your help, I would have failed.</em></li>
 <li><em>if it weren't for / if it hadn't been for</em> + nome</li>
 </ul>
-<div class="note">Link della docente: dopo <em>when, as soon as, until, unless, if</em> con senso futuro si usa il <b>presente</b>, mai <span class="x">will</span>. Vedi anche "Futuro e time clauses".</div>`,
+<div class="note">Ricorda: dopo <em>when, as soon as, until, unless, if</em> con senso futuro si usa il <b>presente</b>, mai <span class="x">will</span>. Vedi anche "Futuro e time clauses".</div>`,
 items: [
 kwt('I didn\'t know you were coming, so I didn\'t cook.', 'HAD', '___ you were coming, I would have cooked.', ['had I known', 'had I known that']),
 kwt('Without your help, I would have failed.', 'BEEN', 'If it ___ your help, I would have failed.', ['had not been for']),
@@ -113,8 +113,7 @@ html: `
 <tr><td>è ora che…</td><td>it's (high / about) time + sogg. + <b>past simple</b></td><td>It's high time the government <em>did</em> something.</td></tr>
 </table>
 <p>Mai <span class="x">I wish I would</span>: con lo stesso soggetto si usa <em>could</em> o il past simple.</p>
-<div class="note"><b>Dal tuo foglio "WISH":</b><br>
-<span class="x">I wish people world not use thier</span> → <span class="v">I wish people would not use their…</span><br>
+<div class="note"><b>Errori tipici:</b><br>
 <span class="x">Only I hadn't made</span> → <span class="v">If only I hadn't made…</span><br>
 <span class="x">Not having try</span> → <span class="v">Not having tried</span> (participio passato, vedi Participle clauses)<br>
 <span class="x">Would rather he/had bought</span> → <span class="v">would rather he had bought</span></div>`,
@@ -163,12 +162,12 @@ gap('___ exhausted after the journey, we went straight to bed.', ['Feeling', 'Be
 id: 'concession', title: 'Contrast & concession', tag: 'corso',
 sum: 'although, despite, whereas, nevertheless, no matter, that said, mind you…',
 html: `
-<p>È il foglio "take risks" della lezione. La differenza la fa <b>quello che segue</b>.</p>
+<p>La differenza la fa <b>quello che segue</b>.</p>
 <table>
 <tr><th>Espressione</th><th>Seguita da</th><th>Esempio</th></tr>
 <tr><td>although / even though / though</td><td>frase</td><td><em>Even though</em> she felt under the weather, she went.</td></tr>
 <tr><td>despite / in spite of</td><td>nome / -ing / the fact that</td><td><em>Despite being</em> tired… · <em>In spite of the</em> rain…</td></tr>
-<tr><td>while / whilst / whereas</td><td>frase (confronto tra due fatti)</td><td>Trentini are reserved, <em>whereas</em> …</td></tr>
+<tr><td>while / whilst / whereas</td><td>frase (confronto tra due fatti)</td><td>Northerners are reserved, <em>whereas</em> …</td></tr>
 <tr><td>however / nevertheless / nonetheless / even so / all the same / at the same time</td><td>nuova frase, + virgola</td><td>The plan is fraught with problems. <em>Nevertheless,</em> we should go ahead.</td></tr>
 <tr><td>no matter how / what / who / where</td><td>frase</td><td><em>No matter what</em> you do…</td></tr>
 <tr><td>however + agg./avv.</td><td>sogg. + verbo</td><td><em>However hard</em> I try…</td></tr>
@@ -181,7 +180,7 @@ items: [
 mc('She went to the party ___ she felt under the weather.', ['even though', 'despite', 'whereas', 'nevertheless']),
 mc('This plan is fraught with problems. ___, we should go ahead with it.', ['Nevertheless', 'Although', 'Despite', 'Whereas']),
 mc('Your mum will always be there for you ___ you do.', ['no matter what', 'even so', 'in spite', 'however']),
-mc('Trentini are said to be reserved, ___ southerners are thought to be more outgoing.', ['whereas', 'despite', 'even so', 'mind you']),
+mc('Northerners are said to be reserved, ___ southerners are thought to be more outgoing.', ['whereas', 'despite', 'even so', 'mind you']),
 mc('She\'s really rude and arrogant. ___, guys fall at her feet.', ['Even so', 'Even though', 'Whereas', 'Despite']),
 gap('There is still some discrimination in ___ of the new legislation.', 'spite'),
 gap('He isn\'t so bright. That ___, he\'s rather good-looking and certainly has that going for him.', 'said'),
@@ -274,7 +273,7 @@ kwt('He smoked when he was younger, but he doesn\'t now.', 'USED', 'He ___ when 
 id: 'future', title: 'Futuro e time clauses', tag: 'corso',
 sum: 'as soon as I get…, will have finished, be about to, be due to.',
 html: `
-<h3>Time clauses (link della docente)</h3>
+<h3>Time clauses</h3>
 <p>Dopo <em>when, as soon as, once, until, before, after, by the time, the moment, unless, if</em> → <b>presente</b> (o present perfect), mai will: <em>I'll call you as soon as I <b>get</b> home.</em> · <em>Once you <b>have finished</b>, check your answers.</em></p>
 <h3>Forme di futuro da C1</h3>
 <table>
@@ -335,7 +334,7 @@ html: `
 <tr><td>verbo + <b>ogg. + prep. + -ing</b></td><td>accuse sb <em>of</em>, blame sb <em>for</em>, congratulate sb <em>on</em>, thank sb <em>for</em>, prevent sb <em>from</em></td></tr>
 <tr><td>verbo + <b>that + sogg. + (should) + inf.</b></td><td>suggest, recommend, insist, demand, propose → <em>I recommend that the council (should) approve the plan.</em></td></tr>
 </table>
-<div class="note"><b>Dal tuo proposal:</b> <span class="x">I strongly recommend to accept them</span> → <span class="v">I strongly recommend accepting them</span> / <span class="v">I strongly recommend that they (should) be accepted</span>. È un errore che gli esaminatori notano subito.</div>
+<div class="note"><b>Errore tipico:</b> <span class="x">I strongly recommend to accept them</span> → <span class="v">I strongly recommend accepting them</span> / <span class="v">I strongly recommend that they (should) be accepted</span>. È un errore che gli esaminatori notano subito.</div>
 <h3>Gerundio o infinito? Cambia il significato</h3>
 <ul>
 <li><em>remember / forget doing</em> = ricordo di averlo fatto · <em>remember to do</em> = ricordarsi di farlo</li>
@@ -388,7 +387,7 @@ gap('The sooner we leave, the ___ we\'ll arrive.', ['earlier', 'sooner'], '', '(
 id: 'adverbs', title: 'Comment adverbs ed enfasi', tag: 'corso',
 sum: 'Admittedly, arguably, presumably… + do/does/did enfatico.',
 html: `
-<p>I <b>comment adverbs</b> (dal Wordwall della docente) mostrano l'atteggiamento di chi parla. Di solito vanno all'inizio, seguiti da virgola. In un essay valgono oro.</p>
+<p>I <b>comment adverbs</b> mostrano l'atteggiamento di chi parla. Di solito vanno all'inizio, seguiti da virgola. In un essay valgono oro.</p>
 <table>
 <tr><td><em>Admittedly</em></td><td>lo ammetto / bisogna riconoscere che</td></tr>
 <tr><td><em>Arguably</em></td><td>si può sostenere che</td></tr>

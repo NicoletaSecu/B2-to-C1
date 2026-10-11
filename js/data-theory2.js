@@ -27,7 +27,7 @@ html: `
 <li>Gruppi con aggettivo: <em>the rich, the unemployed, the elderly, the young</em> (verbo plurale)</li>
 <li>Geografia: fiumi, mari, oceani, catene montuose, arcipelaghi, deserti (<em>the Thames, the Alps, the Sahara</em>); paesi al plurale o con "Republic / Kingdom / States" (<em>the Netherlands, the UK, the USA</em>)</li>
 <li><em>the cinema, the theatre, the radio, the news, the countryside, the seaside</em></li>
-<li>Con <em>of</em>: <em>the University of Trento, the history of art</em></li>
+<li>Con <em>of</em>: <em>the University of Bath, the history of art</em></li>
 </ul>
 <h3>4. Nessun articolo</h3>
 <ul>
@@ -255,7 +255,7 @@ gap('Prices have risen ___ over the last year.', 'dramatically', '', '(DRAMATIC)
 gap('I don\'t like horror films, and my sister doesn\'t ___.', 'either'),
 gap('You\'re not driving fast ___: we\'ll be late.', 'enough'),
 gap('She ___ lives in the same flat she moved into twenty years ago.', 'still'),
-kwt('He doesn\'t live in Trento any more.', 'LONGER', 'He ___ in Trento.', ['no longer lives']),
+kwt('He doesn\'t live in Bath any more.', 'LONGER', 'He ___ in Bath.', ['no longer lives']),
 ]},
 {
 group: 'Preposizioni', id: 'prepositions', title: 'Preposizioni: tempo, luogo e preposizioni dipendenti',
@@ -400,7 +400,7 @@ html: `
 <tr><td>sub- / super- / semi- / multi-</td><td>sotto / sopra / mezzo / molti</td><td>subconscious, substandard · supernatural · semi-final · multicultural, multitasking</td></tr>
 <tr><td>up- / down-</td><td>su / giù</td><td>upgrade, update, upbringing, uphold · downgrade, download, downturn, downside</td></tr>
 </table>
-<p><b>un- o in-?</b> (lezione della docente) Non c'è regola sicura, ma: <em>un-</em> si attacca a quasi tutte le parole di origine germanica e ai participi (<em>unknown, unfinished, unpredictable, unforgettable</em>); <em>in-/im-/il-/ir-</em> a parole di origine latina (<em>incorrect, inevitable, impatient</em>). Coppie irregolari: <em>able → <b>un</b>able</em> ma <em>ability → <b>in</b>ability</em>; <em>stable → <b>un</b>stable</em> ma <em><b>in</b>stability</em>; <em>equal → <b>un</b>equal</em> ma <em><b>in</b>equality</em>; <em>just → <b>un</b>just</em> ma <em><b>in</b>justice</em>; <em>grateful → <b>un</b>grateful</em> ma <em><b>in</b>gratitude</em>. Flashcard: <a href="#lessico/prefixes">prefissi negativi</a>.</p>
+<p><b>un- o in-?</b> Non c'è regola sicura, ma: <em>un-</em> si attacca a quasi tutte le parole di origine germanica e ai participi (<em>unknown, unfinished, unpredictable, unforgettable</em>); <em>in-/im-/il-/ir-</em> a parole di origine latina (<em>incorrect, inevitable, impatient</em>). Coppie irregolari: <em>able → <b>un</b>able</em> ma <em>ability → <b>in</b>ability</em>; <em>stable → <b>un</b>stable</em> ma <em><b>in</b>stability</em>; <em>equal → <b>un</b>equal</em> ma <em><b>in</b>equality</em>; <em>just → <b>un</b>just</em> ma <em><b>in</b>justice</em>; <em>grateful → <b>un</b>grateful</em> ma <em><b>in</b>gratitude</em>. Flashcard: <a href="#lessico/prefixes">prefissi negativi</a>.</p>
 <h3>5. Spelling</h3>
 <ul>
 <li>-y → -i- davanti al suffisso: <em>happy → happiness, rely → reliable, vary → various</em> (ma <em>enjoy → enjoyment</em>)</li>

@@ -2,7 +2,7 @@
 // I mazzi "Oxford 5000" contengono parole marcate C1 nella lista The Oxford 5000 (Oxford University Press);
 // traduzioni ed esempi sono scritti per questo sito.
 // Carta = [termine, significato, esempio, (nota d'uso), (secondo esempio)]
-C1.vocab.forEach(d => { d.group = d.group || 'Dal corso e per l\'esame'; });
+C1.vocab.forEach(d => { d.group = d.group || 'Per l\'esame'; });
 C1.vocab = C1.vocab.filter(d => d.id !== 'idioms');
 
 C1.vocab.unshift(
@@ -285,12 +285,12 @@ C1.vocab.unshift(
 C1.vocab.push(
 { id: 'idioms', group: 'Modi di dire', title: 'Idioms spiegati (con uso ed esempi)', tag: 'top', sum: 'Significato, come e quando usarlo, due esempi. Per speaking, lettere informali e review.', cards: [
 ['to a T / to a tee', 'alla perfezione, nei minimi dettagli', 'That jacket suits you to a T.', 'Va dopo il verbo: suit / fit / describe somebody to a T; do something to a T; have something down to a T (= saperlo fare perfettamente). Informale.', 'She followed the recipe to a T, and the cake came out perfectly.'],
-['under the weather', 'non in forma, un po\' malato', 'She went to the party even though she felt under the weather.', 'Con feel / be / look. Solo per malesseri leggeri, mai per malattie serie. (Dal corso)', 'I\'m a bit under the weather today, so I\'ll work from home.'],
-['be fraught with', 'essere pieno di (problemi, rischi, difficoltà)', 'This plan is fraught with problems.', 'Sempre + nome negativo: fraught with danger / difficulties / risk. Registro neutro-formale: va benissimo anche in un essay. (Dal corso)', 'The journey across the mountains was fraught with danger.'],
-['have something going for you', 'avere un punto a proprio favore', 'He isn\'t so bright, but he\'s good-looking: he has that going for him.', 'Spesso: have a lot / nothing / one thing going for you. Informale. (Dal corso)', 'The town has a lot going for it: good schools, clean air and low rents.'],
-['be in two minds (about)', 'essere indeciso', 'I\'m in two minds about accepting the job.', 'Variante vista a lezione: "I\'m of half a mind to quit" = sono quasi tentato di. In two minds about + nome / -ing / whether.', 'She was in two minds whether to tell him the truth.'],
-['poke fun at', 'prendere in giro', 'It\'s healthy to be able to poke fun at yourself.', 'Di solito scherzoso, non cattivo. + persona o cosa. (Dal corso)', 'The show pokes fun at politicians of all parties.'],
-['put your feet up', 'rilassarsi, riposarsi', 'I wish I could put my feet up this weekend.', 'Dopo il lavoro o la fatica. Informale. (Dal corso)', 'You\'ve been working all day: sit down and put your feet up.'],
+['under the weather', 'non in forma, un po\' malato', 'She went to the party even though she felt under the weather.', 'Con feel / be / look. Solo per malesseri leggeri, mai per malattie serie.', 'I\'m a bit under the weather today, so I\'ll work from home.'],
+['be fraught with', 'essere pieno di (problemi, rischi, difficoltà)', 'This plan is fraught with problems.', 'Sempre + nome negativo: fraught with danger / difficulties / risk. Registro neutro-formale: va benissimo anche in un essay.', 'The journey across the mountains was fraught with danger.'],
+['have something going for you', 'avere un punto a proprio favore', 'He isn\'t so bright, but he\'s good-looking: he has that going for him.', 'Spesso: have a lot / nothing / one thing going for you. Informale.', 'The town has a lot going for it: good schools, clean air and low rents.'],
+['be in two minds (about)', 'essere indeciso', 'I\'m in two minds about accepting the job.', 'Variante: "I\'m of half a mind to quit" = sono quasi tentato di. In two minds about + nome / -ing / whether.', 'She was in two minds whether to tell him the truth.'],
+['poke fun at', 'prendere in giro', 'It\'s healthy to be able to poke fun at yourself.', 'Di solito scherzoso, non cattivo. + persona o cosa.', 'The show pokes fun at politicians of all parties.'],
+['put your feet up', 'rilassarsi, riposarsi', 'I wish I could put my feet up this weekend.', 'Dopo il lavoro o la fatica. Informale.', 'You\'ve been working all day: sit down and put your feet up.'],
 ['over the moon', 'al settimo cielo', 'I was over the moon when I heard I had passed.', 'Con be. Molto comune nelle lettere informali. Non graduabile con very: absolutely over the moon.', 'They\'re over the moon about the new baby.'],
 ['take something with a pinch of salt', 'prendere con le pinze, non credere del tutto', 'I\'d take his promises with a pinch of salt.', 'Quando una fonte non è affidabile. Americano: with a grain of salt.', 'Online reviews should be taken with a pinch of salt.'],
 ['a blessing in disguise', 'una fortuna nascosta', 'Losing that job turned out to be a blessing in disguise.', 'Qualcosa che sembrava negativo e si rivela positivo. Spesso con turn out to be / prove to be.', 'The delay was a blessing in disguise: it gave us time to rethink the plan.'],
@@ -323,7 +323,7 @@ C1.vocab.push(
 ['the life and soul of the party', 'l\'anima della festa', 'He\'s the life and soul of the party.', 'Con be. Per una persona molto socievole e divertente.', 'She used to be shy, but now she\'s the life and soul of every party.'],
 ['take matters into your own hands', 'prendere in mano la situazione', 'When the council did nothing, the residents took matters into their own hands.', 'Quando chi dovrebbe agire non lo fa.', 'Tired of waiting, she took matters into her own hands and fixed it herself.'],
 ['a vicious circle', 'un circolo vizioso', 'Stress causes insomnia, which causes more stress: it\'s a vicious circle.', 'Con be / get caught in / break. Adatto a essay e report.', 'Many people get caught in a vicious circle of debt.'],
-['the pros and cons', 'i pro e i contro', 'We weighed up the pros and cons before deciding.', 'Con weigh up / consider / discuss. (Dal tuo appunto: pros, positives / cons, downsides, drawbacks.)', 'There are pros and cons to working from home.'],
+['the pros and cons', 'i pro e i contro', 'We weighed up the pros and cons before deciding.', 'Con weigh up / consider / discuss. Sinonimi: pros, positives / cons, downsides, drawbacks.', 'There are pros and cons to working from home.'],
 ['a grey area', 'una zona grigia, un punto poco chiaro', 'The law on this is a bit of a grey area.', 'Per regole o situazioni non definite chiaramente.', 'Whether this counts as work is something of a grey area.'],
 ['get the hang of', 'prenderci la mano', 'It took me a week to get the hang of the new software.', 'Get the hang of + nome / -ing. Informale.', 'Key word transformations are hard at first, but you soon get the hang of them.'],
 ['from scratch', 'da zero', 'She built the business from scratch.', 'Con start / build / make / learn. Avverbio, a fine frase.', 'I had to learn the language from scratch.'],
@@ -343,6 +343,6 @@ C1.vocab.push(
 ['a win-win situation', 'una situazione in cui vincono tutti', 'The scheme is a win-win situation for tourists and residents.', 'Ottimo nella conclusione di un proposal.', 'Flexible hours are a win-win for staff and employers alike.'],
 ['the bottom line', 'il succo, la cosa che conta', 'The bottom line is that we can\'t afford it.', 'The bottom line is (that)… per concludere un ragionamento, soprattutto all\'orale.', 'The bottom line is that the plan will only work if everyone cooperates.'],
 ['a badge of honour', 'un vanto, motivo d\'orgoglio', 'He wore his long working hours as a badge of honour.', 'Con wear / see something as. Spesso ironico.', 'For some people, being busy has become a badge of honour.'],
-['take its toll (on)', 'farsi sentire, lasciare il segno', 'The long hours are starting to take their toll.', 'Soggetto: stress, lavoro, età. Anche: take a heavy toll on. (Dal corso: take a toll on.)', 'Years of smoking took their toll on his health.'],
+['take its toll (on)', 'farsi sentire, lasciare il segno', 'The long hours are starting to take their toll.', 'Soggetto: stress, lavoro, età. Anche: take a heavy toll on. Variante: take a toll on.', 'Years of smoking took their toll on his health.'],
 ]}
 );

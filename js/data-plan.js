@@ -1,4 +1,4 @@
-// FORMATO ESAME, PIANO DI STUDIO, RISORSE DELLA DOCENTE
+// FORMATO ESAME, PIANO DI STUDIO, RISORSE UTILI
 C1.exam = `
 <p>Il <b>C1 Advanced (CAE)</b> ha quattro prove. Il voto finale è la media di <b>cinque</b> punteggi (Reading, Use of English, Writing, Listening, Speaking), ognuno vale il 20%: <b>puoi compensare una prova debole con le altre</b>.</p>
 <table class="tbl">
@@ -50,15 +50,15 @@ C1.exam = `
 C1.plan = [
 ['Giorno 1 – Capire l\'esame e partire', [['Leggi il formato dell\'esame', '#esame'], ['Grammatica: Inversion', '#t/g-inversion'], ['Lessico: espressioni con TAKE', '#lessico/take'], ['Part 4 – Set C', '#t/p4-c']]],
 ['Giorno 2 – Test diagnostico', [['Simulazione 1 completa (90 minuti, senza interruzioni)', '#sim/1'], ['Rivedi ogni errore nel quaderno degli errori', '#errori']]],
-['Giorno 3 – Enfasi e condizionali', [['Grammatica: Cleft sentences', '#t/g-cleft'], ['Grammatica: Conditionals avanzati', '#t/g-conditionals'], ['Lessico: phrasal verbs con COME', '#lessico/come'], ['Part 1 – The price of popularity', '#t/p1-c'], ['Writing: guida all\'essay + il tuo essay corretto', '#writing/miei']]],
+['Giorno 3 – Enfasi e condizionali', [['Grammatica: Cleft sentences', '#t/g-cleft'], ['Grammatica: Conditionals avanzati', '#t/g-conditionals'], ['Lessico: phrasal verbs con COME', '#lessico/come'], ['Part 1 – The price of popularity', '#t/p1-c'], ['Writing: guida all\'essay', '#writing/essay']]],
 ['Giorno 4 – Wish + primo essay', [['Grammatica: Wish / would rather', '#t/g-wish'], ['Lessico: idioms', '#lessico/idioms'], ['Part 4 – Set D', '#t/p4-d'], ['Listening Part 1', '#t/l-1'], ['Scrivi un essay in 45 minuti (traccia 2)', '#scrivi/essay/1']]],
 ['Giorno 5 – Participi e concessive', [['Grammatica: Participle clauses', '#t/g-participle'], ['Grammatica: Contrast & concession', '#t/g-concession'], ['Lessico: collocations', '#lessico/colloc'], ['Part 2 – A town reborn', '#t/p2-c'], ['Speaking: Part 1 e Part 2 con timer', '#speaking']]],
-['Giorno 6 – Passivo e modali', [['Grammatica: Passivo avanzato', '#t/g-passive'], ['Grammatica: Modali', '#t/g-modals'], ['Lessico: phrasal verbs essenziali', '#lessico/phrasal'], ['Part 4 – Set E', '#t/p4-e'], ['Listening Part 2', '#t/l-2'], ['Writing: guida al proposal + il tuo proposal corretto', '#writing/miei']]],
+['Giorno 6 – Passivo e modali', [['Grammatica: Passivo avanzato', '#t/g-passive'], ['Grammatica: Modali', '#t/g-modals'], ['Lessico: phrasal verbs essenziali', '#lessico/phrasal'], ['Part 4 – Set E', '#t/p4-e'], ['Listening Part 2', '#t/l-2'], ['Writing: guida al proposal', '#writing/proposal']]],
 ['Giorno 7 – Prova completa esterna', [['Un Reading & UoE completo su EngExam (Test 1), cronometrato', 'https://engexam.info/cae-reading-and-use-of-english-practice-tests/'], ['Scrivi un proposal in 45 minuti', '#scrivi/proposal/1'], ['Quaderno degli errori', '#errori']]],
 ['Giorno 8 – Verb patterns e word formation', [['Grammatica: Reporting verbs e verb patterns', '#t/g-reporting'], ['Lessico: prefissi negativi', '#lessico/prefixes'], ['Lessico: word families', '#lessico/families'], ['Part 3 – Lost in translation', '#t/p3-c'], ['Listening Part 3', '#t/l-3']]],
 ['Giorno 9 – Used to, futuro, preposizioni', [['Grammatica: Used to / be used to', '#t/g-usedto'], ['Grammatica: Futuro e time clauses', '#t/g-future'], ['Lessico: preposizioni dipendenti', '#lessico/preps'], ['Part 4 – Set F', '#t/p4-f'], ['Speaking: Part 3 e Part 4', '#speaking'], ['Un Listening completo su EngExam (Test 1)', 'https://engexam.info/cae-listening-practice-tests/cae-listening-practice-test-1/']]],
 ['Giorno 10 – Rifiniture di grammatica + writing', [['Grammatica: So / neither / nor', '#t/g-soneither'], ['Grammatica: Comparativi', '#t/g-comparatives'], ['Grammatica: Comment adverbs', '#t/g-adverbs'], ['Lessico: linkers e frasi da essay', '#lessico/linkers'], ['Part 4 – Set G', '#t/p4-g'], ['Scrivi un report o una review in 45 minuti', '#writing']]],
-['Giorno 11 – Prova completa esterna', [['Reading & UoE Test 11 su EngExam (condiviso dalla docente)', 'https://engexam.info/cae-reading-and-use-of-english-practice-tests/cae-reading-and-use-of-english-practice-test-11/'], ['Listening Part 4', '#t/l-4'], ['Lessico: formale vs informale', '#lessico/register']]],
+['Giorno 11 – Prova completa esterna', [['Reading & UoE Test 11 su EngExam', 'https://engexam.info/cae-reading-and-use-of-english-practice-tests/cae-reading-and-use-of-english-practice-test-11/'], ['Listening Part 4', '#t/l-4'], ['Lessico: formale vs informale', '#lessico/register']]],
 ['Giorno 12 – Seconda simulazione', [['Simulazione 2 completa (90 minuti)', '#sim/2'], ['Quaderno degli errori', '#errori'], ['Scrivi una lettera informale in 45 minuti', '#scrivi/letter/0']]],
 ['Giorno 13 – Ripasso mirato', [['Ripasso rapido di tutti gli errori', '#errori'], ['Part 4 – Set H', '#t/p4-h'], ['Rifai gli argomenti di grammatica sotto il 70%', '#grammatica'], ['Un Listening completo su EngExam (Test 10)', 'https://engexam.info/cae-listening-practice-tests/cae-listening-practice-test-10/'], ['Speaking: tutte e quattro le parti di fila, registrandoti', '#speaking']]],
 ['Giorno 14 – Vigilia del mock', [['Flashcard: solo le carte "da ripassare"', '#lessico'], ['Rileggi i model answer di essay e proposal', '#writing'], ['Rileggi il formato e i tempi per parte', '#esame'], ['Stop entro sera: dormi bene, domani c\'è il mock', '#home']]],
@@ -71,12 +71,12 @@ C1.planCycle = [
 ['Ripasso errori', [['Quaderno degli errori: ripasso rapido', '#errori'], ['Rifai due argomenti di grammatica', '#grammatica'], ['Rifai una simulazione o le sue parti peggiori', '#sim']]],
 ];
 
-// Link condivisi dalla docente, raggruppati
+// Link utili, raggruppati
 C1.resources = [
 ['Prove d\'esame complete (da fare cronometrate)', [
-['EngExam – tutti i test CAE', 'https://engexam.info/cae/', 'Indicato dalla docente come "exam practice da usare". Reading & UoE e Listening completi con soluzioni.'],
-['EngExam – Reading & UoE Test 11', 'https://engexam.info/cae-reading-and-use-of-english-practice-tests/cae-reading-and-use-of-english-practice-test-11/8/', 'Assegnato a lezione (Part 8).'],
-['EngExam – Reading & UoE Test 14', 'https://engexam.info/cae-reading-and-use-of-english-practice-tests/cae-reading-and-use-of-english-practice-test-14/8/', 'Assegnato a lezione (Part 8).'],
+['EngExam – tutti i test CAE', 'https://engexam.info/cae/', 'Reading & UoE e Listening completi con soluzioni.'],
+['EngExam – Reading & UoE Test 11', 'https://engexam.info/cae-reading-and-use-of-english-practice-tests/cae-reading-and-use-of-english-practice-test-11/8/', 'Part 8.'],
+['EngExam – Reading & UoE Test 14', 'https://engexam.info/cae-reading-and-use-of-english-practice-tests/cae-reading-and-use-of-english-practice-test-14/8/', 'Part 8.'],
 ['EngExam – Listening Test 1', 'https://engexam.info/cae-listening-practice-tests/cae-listening-practice-test-1/', ''],
 ['EngExam – Listening Test 10, Part 4', 'https://engexam.info/cae-listening-practice-tests/cae-listening-practice-test-10/4/', ''],
 ['EngExam – Listening Test 23, Part 2', 'https://engexam.info/cae-listening-practice-tests/cae-listening-practice-test-23/2/', ''],
@@ -89,7 +89,7 @@ C1.resources = [
 ['English Revealed – CAE', 'https://www.englishrevealed.co.uk/cae.php', 'Tantissimi esercizi di Use of English divisi per parte.'],
 ['ESL Lounge – Advanced', 'https://www.esl-lounge.com/student/advanced.php', ''],
 ]],
-['Grammatica vista a lezione', [
+['Grammatica', [
 ['Test-English – Used to', 'https://test-english.com/grammar-points/b1-b2/used-to/', ''],
 ['Test-English – First conditional e future time clauses', 'https://test-english.com/grammar-points/b1/first-conditional-future-time-clauses/', ''],
 ['Test-English – So, neither', 'https://test-english.com/grammar-points/a2/so-neither/', ''],
@@ -103,11 +103,11 @@ C1.resources = [
 ['Wordwall – Comment adverbs (advanced)', 'https://wordwall.net/resource/37638965', ''],
 ['Wordwall – C1 tourism essay language', 'https://wordwall.net/resource/115313495', ''],
 ['Wordwall – C1 informal letter language', 'https://wordwall.net/resource/113906125', ''],
-['Liveworksheets – worksheet della lezione', 'https://www.liveworksheets.com/worksheet/en/english-second-language-esl/2140934', ''],
+['Liveworksheets – worksheet', 'https://www.liveworksheets.com/worksheet/en/english-second-language-esl/2140934', ''],
 ['Video – Difference between in- and un- prefixes', 'https://www.youtube.com/watch?v=PcwzXqpV4aA', ''],
 ]],
 ['Ascolto e video', [
-['BBC Ideas – What multitasking does to your brain', 'https://www.youtube.com/watch?v=tMiyzuO1qMs', 'Video della lezione sul multitasking.'],
+['BBC Ideas – What multitasking does to your brain', 'https://www.youtube.com/watch?v=tMiyzuO1qMs', 'Video sul multitasking.'],
 ['The Myth of Multitasking exercise', 'https://www.youtube.com/watch?v=5eQyfirx2HA', 'L\'esercizio lettere/numeri.'],
 ['Scottish Elevator – Voice Recognition', 'https://www.youtube.com/watch?v=NMS2VnDveP8', 'Sketch sugli accenti.'],
 ['BBC 6 Minute English – How reading shapes your brain', 'https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260514', ''],
@@ -120,7 +120,7 @@ C1.resources = [
 ['AsapSCIENCE (YouTube)', 'https://www.youtube.com/@AsapSCIENCE', ''],
 ]],
 ['Lettura', [
-['New York Times – articolo letto a lezione', 'https://www.nytimes.com/2026/05/19/us/politics/trump-stock-trades.html', ''],
+['New York Times – articolo di attualità', 'https://www.nytimes.com/2026/05/19/us/politics/trump-stock-trades.html', ''],
 ]],
 ];
 

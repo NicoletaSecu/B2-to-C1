@@ -255,7 +255,7 @@ All in all, though, this is a remarkable piece of film-making. I would recommend
 },
 { id: 'letter', title: 'Letter / Email (formale e informale)', sum: 'Il registro è tutto: capisci a chi scrivi e mantieni il tono dall\'inizio alla fine.',
 guide: `
-<p>Può essere <b>informale</b> (a un amico: consigli, notizie, inviti) o <b>formale</b> (a un giornale, a un'azienda, una candidatura, un reclamo). La docente ha lavorato sul linguaggio della lettera informale: vedi anche il mazzo <a href="#lessico/register">Formale vs informale</a>.</p>
+<p>Può essere <b>informale</b> (a un amico: consigli, notizie, inviti) o <b>formale</b> (a un giornale, a un'azienda, una candidatura, un reclamo). Per il linguaggio della lettera informale vedi anche il mazzo <a href="#lessico/register">Formale vs informale</a>.</p>
 <table class="tbl">
 <tr><th></th><th>Informale</th><th>Formale</th></tr>
 <tr><td>Apertura</td><td>Dear Sam, / Hi Sam,</td><td>Dear Sir or Madam, / Dear Ms Brown,</td></tr>
@@ -290,50 +290,6 @@ Anyway, whatever you decide, I'm behind you all the way. Drop me a line when you
 Lots of love,
 Alex` },
 },
-],
-// I due testi trovati nella cartella "materiale", corretti.
-mine: [
-{ title: 'Il tuo essay sul turismo (tourism_essay.rtf)',
-verdict: `<p><b>Cosa funziona:</b> struttura in paragrafi chiara, buoni linkers (<i>It is generally accepted that, Another point to bear in mind, It goes without saying</i>), e due inversioni corrette (<i>Not only does…, Rare are the occasions when…</i>). La base c'è.</p>
-<p><b>Cosa ti fa perdere punti:</b></p>
-<ul>
-<li><b>Lunghezza:</b> 187 parole. Il minimo è 220: sotto, perdi punti in Content. Ti manca un paragrafo di sviluppo.</li>
-<li><b>Conclusione:</b> la traccia chiede di dire quale dei due punti è più importante <i>e perché</i>. Tu introduci all'improvviso una terza idea ("global awareness") che non hai discusso. La conclusione deve scegliere tra economia e ambiente.</li>
-<li><b>Errori di lingua</b> (tabella sotto): quasi tutti su forma delle parole e preposizioni, quindi recuperabili in fretta.</li>
-</ul>
-<p>Confrontalo con il <a href="#writing/essay">model answer sulla stessa traccia</a>, che riusa le tue idee.</p>`,
-fixes: [
-['altering both local economies and natural view', 'altering both local economies and the natural environment / natural landscapes', '"view" è ciò che vedi da un punto; qui serve environment o landscape.'],
-['from unregulated arrive of visitors', 'from the unregulated influx / arrival of visitors', 'Serve un nome (arrival), non il verbo; "influx" è più C1. Manca l\'articolo.'],
-['the ecosystems remain not damaged', 'ecosystems remain undamaged', 'Prefisso negativo un- (lezione UN vs IN).'],
-['by big construction', 'by large-scale construction', 'Lessico più preciso e formale.'],
-['are still rising quicly because the air traveling', 'are still rising quickly because of air travel', 'Spelling; because OF + nome; il nome è "air travel".'],
-['remains the main critical challenge', 'remains the most critical challenge', 'main + critical è ridondante.'],
-['It is rare to achieve rare-term green goals', 'Long-term green goals are rarely achieved without strict government legislation', '"rare-term" non esiste: long-term. Il passivo suona più formale.'],
-['Of the two advantages, undoubtedly the greatest is encourage global awareness', 'Of the two issues, the environmental one is undoubtedly the more significant, since…', 'Dopo "is" serve -ing o un nome; tra DUE si usa il comparativo (the more…), non il superlativo; e l\'idea deve essere una di quelle discusse.'],
-['While the quick profits are clear, depending too much on just one unstable industry can cause high inflation.', 'While the short-term profits are clear, over-reliance on a single unstable industry can drive up inflation.', 'Corretto, ma si può alzare il livello: short-term, over-reliance, drive up.'],
-]},
-{ title: 'Il tuo proposal sul town (proposal-town.txt)',
-verdict: `<p><b>Cosa funziona:</b> le idee sono chiare e ben collegate ai due destinatari (turisti e residenti), il tono è educato, i condizionali sono giusti (<i>would give, could sell</i>).</p>
-<p><b>Cosa ti fa perdere punti:</b></p>
-<ul>
-<li><b>Formato:</b> mancano i <b>titoletti</b>. In un proposal sono attesi (Introduction, una sezione per idea, Conclusion/Recommendations): senza, cala Communicative Achievement.</li>
-<li><b>Lunghezza:</b> 201 parole, sotto il minimo di 220.</li>
-<li><b>Lessico da B2:</b> <i>nice place, many benefits, really improve, cheap</i>. Per il C1 servono scelte più precise (vedi tabella).</li>
-<li><b>Un errore grave di verb pattern</b> proprio nell'ultima riga, che è quella che l'esaminatore ricorda.</li>
-</ul>
-<p>Confrontalo con il <a href="#writing/proposal">model answer sulla stessa traccia</a>.</p>`,
-fixes: [
-['I strongly recommend to accept them.', 'I strongly recommend accepting them. / I strongly recommend that they (should) be accepted.', 'recommend + -ing oppure + that… Mai recommend + to.'],
-['(nessun titolo)', 'Introduction · A riverside promenade · A covered market · Conclusion', 'Aggiungi titoli alle sezioni.'],
-['a pedestrian walk', 'a pedestrianised promenade / a riverside walkway', 'Collocazione più naturale.'],
-['a nice place to go for a walk', 'a picturesque spot to stroll', '"nice" è da evitare al C1.'],
-['Both ideas would bring many benefits.', 'Both projects would be highly beneficial to the town as a whole.', 'Più formale e meno generico.'],
-['buy fresh and cheap food', 'have access to fresh, affordable food', '"cheap" può suonare negativo; affordable è neutro-positivo.'],
-['areas that are empty at the moment', 'sites that are currently standing empty', 'Registro più formale.'],
-['would really improve the quality of life', 'would considerably enhance the quality of life', 'really → considerably/significantly; improve → enhance.'],
-['I am sure that these changes would be worth it', 'I am convinced that these changes would be a worthwhile investment', 'Più formale; evita "it" vago.'],
-]},
 ],
 };
 
@@ -379,7 +335,7 @@ parts: [
 'Do we take things like peace and clean water for granted?',
 'Should schools teach children how to take risks?',
 ]},
-{ title: 'Dalle lezioni – "Take" e "sense of" (1 minuto ciascuna)', time: 60, info: 'Le domande dei fogli della docente. Prova a riusare l\'espressione nella risposta.', sets: [
+{ title: 'Espressioni – "Take" e "sense of" (1 minuto ciascuna)', time: 60, info: 'Prova a riusare l\'espressione nella risposta.', sets: [
 'Talk about something that has given you a sense of accomplishment in your life.',
 'Talk about something the local government can do to promote a greater sense of community.',
 'Talk about something important to do so as to improve your personal sense of well-being.',
@@ -389,7 +345,7 @@ parts: [
 'Should we TAKE statistics about young people AT FACE VALUE?',
 'If you\'re working in a team, are you typically the one who TAKES CHARGE?',
 'Tell me two things you should TAKE INTO ACCOUNT when deciding whether to share a flat with someone.',
-'Finish and continue: "Trento is a really small and quaint city. That said, …"',
+'Finish and continue: "Bath is a really small and quaint city. That said, …"',
 'Finish and continue: "People will always believe conspiracy theories no matter…"',
 'Are you a risk-taker? Which is riskier: quitting your job without having another one, or investing all your money in Bitcoin?',
 ]},
